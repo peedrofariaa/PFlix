@@ -1,6 +1,6 @@
 import { getMovieCredits, getMovieDetail, getMovieSimilar, getMovieVideos } from "../../service/getData"
 import { getImages } from "../../utils/getImages.js"
-import { Background, Container, Cover } from "./style"
+import { Background, Container, Cover, Info } from "./style"
 import { useEffect, useState } from "react"
 import { useParams } from 'react-router-dom'
 
@@ -35,13 +35,19 @@ export const Details = () => {
     return (
         <>
             {movieDetail && (
-                <Background img={getImages(movieDetail.backdrop_path)} />)}
-            <Container>
-                <Cover>
-                    <img src={getImages(movieDetail.poster_path)}/>
-                </Cover>
-            </Container>
-
+                <>
+                    <Background img={getImages(movieDetail.backdrop_path)} />
+                    <Container>
+                        <Cover>
+                            <img src={getImages(movieDetail.poster_path)} />
+                        </Cover>
+                        <Info>
+                            <h2>{movieDetail.title}</h2>
+                            <p>{movieDetail.overview}</p>
+                        </Info>
+                    </Container>
+                </>
+            )}
         </>
     )
 }

@@ -9,4 +9,7 @@ export default createGlobalStyle`
         outline: none;
         font-family: 'Montserrat', sans-serif;
     }
+    body{
+        background: #000000;
+    }
 `;
