@@ -18,31 +18,31 @@ export async function getTopSeries() {
     return results
 }
 
-export async function getPeople(){
+export async function getPeople() {
     const { data: { results } } = await api.get('/person/popular')
 
     return results
 }
 
-export async function getMovieVideos(movieId){
+export async function getMovieVideos(movieId) {
     const { data: { results } } = await api.get(`/movie/${movieId}/videos`)
 
     return results[0]
 }
 
-export async function getMovieCredits(movieId){
-    const { data } = await api.get(`/movie/${movieId}/credits`)
+export async function getMovieCredits(movieId) {
+    const { data: { cast } } = await api.get(`/movie/${movieId}/credits`)
 
-    return data
+    return cast
 }
 
-export async function getMovieSimilar(movieId){
+export async function getMovieSimilar(movieId) {
     const { data: { results } } = await api.get(`/movie/${movieId}/similar`)
 
     return results
 }
 
-export async function getMovieDetail(movieId){
+export async function getMovieDetail(movieId) {
     const { data } = await api.get(`/movie/${movieId}`)
 
     return data

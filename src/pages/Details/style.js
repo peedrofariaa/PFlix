@@ -63,7 +63,7 @@ export const Cover = styled.div`
 
 export const Info = styled.div`
     display: flex;
-    align-items: self-start;
+    align-items: flex-start;
     flex-direction: column;
     z-index: 99;
     width: 50%;
@@ -75,7 +75,9 @@ export const Info = styled.div`
     }
     p{
         font-weight: 700;
+        font-size: 17px;
         color: white;
-        margin-top: 20px;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 `

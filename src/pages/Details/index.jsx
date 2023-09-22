@@ -1,9 +1,11 @@
+import { Slider } from '../../components/Slider'
+import { Credits } from "../../components/Credits"
+import { SpanGenres } from "../../components/SpanGenres"
 import { getMovieCredits, getMovieDetail, getMovieSimilar, getMovieVideos } from "../../service/getData"
 import { getImages } from "../../utils/getImages.js"
 import { Background, Container, Cover, Info } from "./style"
 import { useEffect, useState } from "react"
 import { useParams } from 'react-router-dom'
-
 
 export const Details = () => {
     const { id } = useParams()
@@ -43,9 +45,16 @@ export const Details = () => {
                         </Cover>
                         <Info>
                             <h2>{movieDetail.title}</h2>
+                            <SpanGenres genres={movieDetail.genres} />
                             <p>{movieDetail.overview}</p>
+                            <div>
+                                <Credits credits={movieCredits} />
+                            </div>
                         </Info>
                     </Container>
+                    {movieSimilar && (
+                        <Slider info={movieSimilar} title={'Similar Movies'} />
+                    )}
                 </>
             )}
         </>
