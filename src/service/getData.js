@@ -2,6 +2,7 @@ import api from "./api";
 
 export async function getMoreMovies() {
     const { data: { results } } = await api.get('/movie/popular')
+    
     return results
 }
 
