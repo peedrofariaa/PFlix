@@ -7,7 +7,7 @@ import { Background, Container, Cover, Info } from "./style"
 import { useEffect, useState } from "react"
 import { useParams } from 'react-router-dom'
 
-export const Details = () => {
+export const MovieDetail = () => {
     const { id } = useParams()
     const [movieDetail, setMovieDetail] = useState()
     const [movieVideos, setMovieVideos] = useState()

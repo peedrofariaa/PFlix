@@ -1,9 +1,14 @@
 import api from "./api";
 
+export async function getMoreMovies() {
+    const { data: { results } } = await api.get('/movie/popular')
+    return results
+}
+
 export async function getMovies() {
     const { data: { results } } = await api.get('/movie/popular')
 
-    return results[2]
+    return results[0]
 }
 
 export async function getTopMovies() {
@@ -14,6 +19,12 @@ export async function getTopMovies() {
 
 export async function getTopSeries() {
     const { data: { results } } = await api.get('/tv/top_rated')
+
+    return results
+}
+
+export async function getPopularSeries() {
+    const { data: { results } } = await api.get('/tv/popular')
 
     return results
 }
@@ -46,4 +57,28 @@ export async function getMovieDetail(movieId) {
     const { data } = await api.get(`/movie/${movieId}`)
 
     return data
+}
+
+export async function getSerieCredits(serieId) {
+    const { data: { cast } } = await api.get(`/tv/${serieId}/credits`)
+
+    return cast
+}
+
+export async function getSerieDetail(serieId) {
+    const { data } = await api.get(`/tv/${serieId}`)
+
+    return data
+}
+
+export async function getSerieSimilar(serieId) {
+    const { data: { results } } = await api.get(`/tv/${serieId}/similar`)
+
+    return results
+}
+
+export async function getSerieVideos (serieId) {
+    const { data: {results} } = await api.get(`tv/${serieId}/videos`)
+    
+       return results
 }

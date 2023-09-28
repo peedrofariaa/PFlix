@@ -3,7 +3,8 @@ import { Home } from "./pages/Home";
 import { Movies } from './pages/Movies'
 import { Series } from './pages/Series'
 import { MainLayout } from "./layout/MainLayout";
-import { Details } from "./pages/Details";
+import { MovieDetail } from "./pages/MovieDetails";
+import { SerieDetail } from "./pages/SerieDetails";
 
 function Router() {
     return (
@@ -12,7 +13,8 @@ function Router() {
                 <Route path="/" element={<Home />} />
                 <Route path="/movies" element={<Movies />} />
                 <Route path="/tvshows" element={<Series />} />
-                <Route path="/details/:id" element={<Details />} />
+                <Route path="/moviedetails/:id" element={<MovieDetail />} />
+                <Route path="/seriedetails/:id" element={<SerieDetail />} />
             </Route>
         </Routes>
     )
