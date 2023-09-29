@@ -1,5 +1,11 @@
 import api from "./api";
 
+export async function getUpcomingMovies(){
+    const {data: {results}} = await api.get('/movie/upcoming')
+
+    return results
+}
+
 export async function getMoreMovies() {
     const { data: { results } } = await api.get('/movie/popular')
     
