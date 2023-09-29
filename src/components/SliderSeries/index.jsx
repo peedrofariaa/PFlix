@@ -18,7 +18,7 @@ export const SliderSeries = ({ info, title, isTrue }) => {
     return (
         <Container>
             <h2>{title}</h2>
-            <Swiper grabCursor spaceBetween={10} slidesPerView={matches && (2) || !matches && (5)} freeMode={true} pagination={{ clickable: true }} modules={[FreeMode, Pagination]}>
+            <Swiper grabCursor spaceBetween={10} slidesPerView={'auto'} freeMode={true} pagination={{ clickable: true }} modules={[FreeMode, Pagination]}>
                 {info.map((item, index) => (
                     <SwiperSlide key={index}>
                         <CardSerie item={item} text={true} isShow={isTrue} />
