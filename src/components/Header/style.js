@@ -21,6 +21,9 @@ export const Container = styled.div`
 }
     img{
         width: 10%;
+        @media screen and (max-width: 600px) {
+        display: none;
+}
     }
     
 `
@@ -54,7 +57,7 @@ export const Li = styled.li`
     }
     a::after{
         content: "";
-        width: 0;
+        width: ${(props) => (props.isActive ? '100%' : 0)};
         height: 3px;
         background-color: white;
         position: absolute;
