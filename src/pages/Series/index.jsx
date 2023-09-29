@@ -20,7 +20,6 @@ export const Series = () => {
     return (
         <Container>
             {topSeries && (<SectionSeries info={topSeries} />)}
-            {series && (<SectionSeries info={series} />)}
         </Container>
     )
 }
