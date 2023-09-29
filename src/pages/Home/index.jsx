@@ -4,7 +4,9 @@ import { useNavigate } from 'react-router-dom'
 import { Button } from '../../components/Button'
 import { BsPlayFill } from 'react-icons/bs'
 import { TfiMoreAlt } from 'react-icons/tfi'
-import { Slider } from '../../components/Slider/index.jsx'
+import { Slider } from '../../components/Slider/index.jsx'  
+import { SliderMovies } from '../../components/SliderMovies/index.jsx'
+import { SliderSeries } from '../../components/SliderSeries/index.jsx'
 import { getImages } from '../../utils/getImages.js'
 import { Modal } from '../../components/Modal/index.jsx'
 import { getMovies, getPopularSeries, getTopMovies, getTopSeries, getPeople } from '../../service/getData.js'
@@ -61,9 +63,9 @@ export const Home = () => {
                     </Container>
                 </Background>
             )}
-            {topMovies && <Slider info={topMovies} title={'Top Movies'} />}
-            {topSeries && <Slider info={topSeries} title={'Top Series'} />}
-            {popSeries && <Slider info={popSeries} title={'Popular Series'} />}
+            {topMovies && <SliderMovies info={topMovies} title={'Top Movies'} />}
+            {topSeries && <SliderSeries info={topSeries} title={'Top Series'} />}
+            {popSeries && <SliderSeries info={popSeries} title={'Popular Series'} />}
             {people && <Slider info={people} title={'Popular Artists'} />}
         </>
     )

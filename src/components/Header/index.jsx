@@ -26,7 +26,7 @@ export const Header = () =>{
                 <Link to='/movies'>Movies</Link>
             </Li>
             <Li>
-                <Link to='/tvshows'>Series</Link>
+                <Link to='/series'>Series</Link>
             </Li>
            </Menu>
         </Container>

@@ -1,10 +1,10 @@
-import { Card } from "../Card"
-import { Container } from "./style"
+import { CardMovie } from '../CardMovie'
+import { Container } from './style'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, FreeMode } from 'swiper/modules'
+import { FreeMode, Pagination } from 'swiper/modules';
 import React, { useState, useEffect } from "react"
 
-export const Slider = ({ info, title, isTrue }) => {
+export const SliderMovies = ({ info, title, isTrue }) => {
     const [matches, setMatches] = useState(
         window.matchMedia("(max-width: 600px)").matches
     )
@@ -21,7 +21,7 @@ export const Slider = ({ info, title, isTrue }) => {
             <Swiper grabCursor spaceBetween={10} slidesPerView={matches && (2) || !matches && (5)} freeMode={true} pagination={{ clickable: true }} modules={[FreeMode, Pagination]}>
                 {info.map((item, index) => (
                     <SwiperSlide key={index}>
-                        <Card item={item} text={true} isShow={isTrue} />
+                        <CardMovie item={item} text={true} isShow={isTrue} />
                     </SwiperSlide>
                 ))}
             </Swiper>

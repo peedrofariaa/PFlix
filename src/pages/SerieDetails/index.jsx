@@ -1,4 +1,4 @@
-import { Slider } from '../../components/Slider'
+import { SliderSeries } from '../../components/SliderSeries'
 import { Credits } from "../../components/Credits"
 import { SpanGenres } from "../../components/SpanGenres"
 import { getSerieCredits, getSerieDetail, getSerieSimilar, getSerieVideos } from "../../service/getData"
@@ -53,7 +53,7 @@ export const SerieDetail = () => {
                         </Info>
                     </Container>
                     {serieSimilar && (
-                        <Slider info={serieSimilar} title={'Similar Series'} />
+                        <SliderSeries info={serieSimilar} title={'Similar Series'} />
                     )}
                 </>
             )}
