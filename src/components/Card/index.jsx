@@ -6,7 +6,6 @@ export const Card = ({ item }) => {
     const navigate = useNavigate()
 
     function getId(id) {
-        console.log(id)
     }
 
     return (

@@ -2,7 +2,6 @@ import { getImages } from "../../utils/getImages";
 import { Title, Container } from "./style";
 
 export const Credits = ({ credits }) => {
-    console.log(credits)
     return (
         <>
             <Title>Credits</Title>
