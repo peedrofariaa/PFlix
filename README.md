@@ -1,5 +1,3 @@
-# React + Vite
-
 # PFlix
 
-<p>Check application <a href="">here!</a></p>
+<p>Check application <a href="https://pflix.netlify.app/">here!</a></p>
