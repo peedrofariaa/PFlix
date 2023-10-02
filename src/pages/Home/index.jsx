@@ -73,8 +73,8 @@ export const Home = () => {
             {topMovies && <SliderMovies info={topMovies} title={'Top Movies'} />}
             {topSeries && <SliderSeries info={topSeries} title={'Top Series'} />}
             {moreMovies && <SliderMovies info={moreMovies} title={'Popular Movies'} />}
-            {popSeries && <SliderSeries info={popSeries} title={'Popular Series'} />}
-            {people && <Slider info={people} title={'Popular Artists'} />}
+            {popSeries && <SliderSeries info={popSeries} title={'Popular TV Shows'} />}
+            {people && <Slider onClick={() => navigate(`/artistdetails/${person.id}`)} info={people} title={'Popular Artists'} />}
         </>
     )
 }
