@@ -53,7 +53,7 @@ export const SerieDetail = () => {
                         </Info>
                     </Container>
                     {serieSimilar && (
-                        <SliderSeries info={serieSimilar} title={'Similar Series'} />
+                        <SliderSeries info={serieSimilar} title={'Similar Series'} isTrue={true}/>
                     )}
                 </>
             )}
