@@ -1,32 +1,32 @@
+import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Logo from '../../assets/logo.jpg'
 import { Container, Menu, Li } from './style'
-import { useState } from 'react'
 
 export const Header = () => {
-    const [changeBack, setChangeBack] = useState(false)
+    const [changeBackground, setChangeBackground] = useState(false)
     const { pathname } = useLocation()
 
     window.onscroll = () => {
-        if (!changeBack && window.pageYOffset > 150) {
-            setChangeBack(true)
+        if (window.pageYOffset > 150) {
+            setChangeBackground(true)
         }
-        if (changeBack && window.pageYOffset <= 150) {
-            setChangeBack(false)
+        if (window.pageYOffset <= 150) {
+            setChangeBackground(false)
         }
     }
 
     return (
-        <Container changeBack={changeBack}>
+        <Container changeBackground={changeBackground}>
             <img src={Logo} alt='logo'></img>
             <Menu>
-                <Li isActive={pathname === '/'}>
+                <Li isactive={pathname === '/'}>
                     <Link to='/'>Home</Link>
                 </Li>
-                <Li isActive={pathname.includes('movies')}>
+                <Li isactive={pathname.includes('movies')}>
                     <Link to='/movies'>Movies</Link>
                 </Li>
-                <Li isActive={pathname.includes('series')}>
+                <Li isactive={pathname.includes('series')}>
                     <Link to='/series'>Series</Link>
                 </Li>
             </Menu>

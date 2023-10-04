@@ -10,7 +10,7 @@ export const Container = styled.div`
     padding: 20px 50px;
     justify-content: space-between;
     width: 100%;
-    background-color: ${(props) => props.changeBack ? '#000' : 'transparent'};
+    background-color: ${(props) => props.changeBackground ? '#000' : 'transparent'};
     transition: background-color 0.5s ease-in-out;
 
     @media screen and (max-width: 600px) {
@@ -57,7 +57,7 @@ export const Li = styled.li`
     }
     a::after{
         content: "";
-        width: ${(props) => (props.isActive ? '100%' : 0)};
+        width: ${(props) => (props.isactive ? '100%' : 0)};
         height: 3px;
         background-color: white;
         position: absolute;

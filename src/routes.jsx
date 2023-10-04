@@ -1,14 +1,14 @@
 import { Route, Routes } from "react-router-dom";
-import { Home } from "./pages/Home";
+import { Home } from './pages/Home'
 import { Movies } from './pages/Movies'
 import { Series } from './pages/Series'
-import { MainLayout } from "./layout/MainLayout";
-import { MovieDetail } from "./pages/MovieDetails";
-import { SerieDetail } from "./pages/SerieDetails";
+import { MainLayout } from './layout/MainLayout'
+import { MovieDetail } from './pages/MovieDetails'
+import { SerieDetail } from './pages/SerieDetails'
 
 function Router() {
     return (
-        <Routes>
+        <Routes>  
             <Route element={<MainLayout />} >
                 <Route path="/" element={<Home />} />
                 <Route path="/movies" element={<Movies />} />
