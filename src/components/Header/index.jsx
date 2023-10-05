@@ -16,17 +16,17 @@ export const Header = () => {
         }
     }
 
-    return (
-        <Container changeBackground={changeBackground}>
+    return (    
+        <Container $changeBackground={changeBackground}>
             <img src={Logo} alt='logo'></img>
             <Menu>
-                <Li isactive={pathname === '/'}>
+                <Li $isactive={pathname === '/'}>
                     <Link to='/'>Home</Link>
                 </Li>
-                <Li isactive={pathname.includes('movies')}>
+                <Li $isactive={pathname.includes('movies')}>
                     <Link to='/movies'>Movies</Link>
                 </Li>
-                <Li isactive={pathname.includes('series')}>
+                <Li $isactive={pathname.includes('series')}>
                     <Link to='/series'>Series</Link>
                 </Li>
             </Menu>
